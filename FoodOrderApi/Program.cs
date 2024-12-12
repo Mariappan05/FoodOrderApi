@@ -12,6 +12,9 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
+// Set the URL to listen on all network interfaces (0.0.0.0) and port 5000
+app.Urls.Add("http://0.0.0.0:5000"); // Add this line to listen on 0.0.0.0:5000
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
